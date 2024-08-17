@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600|Merriweather:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+}
+
+h2 {
+    color: rgb(43, 45, 36);
+    font-size: 48px;
+    letter-spacing: -0.2px;
+    font-family: "Merriweather", serif;
+}
+
+p {
+    max-width: 670px;
+    margin: 36px auto;
+}
+
+#editableEditor {
+    max-width: 670px;
+    height: 316px;
+    padding: 18px;
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgb(231, 233, 245);
+    box-shadow: 0 12px 48px rgba(109, 117, 141, 0.2);
+    border-radius: 16px;
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+#editableEditor:focus {
+    border: 0.3px solid rgba(43, 45, 56, 0.3);
+    outline: none;
+}
+
+.correctionRequired {
+    text-decoration: underline;
+    text-decoration-color: #ff0000;
+    position: relative;
+}
+
+.correctionRequired:hover .correction-content {
+    display: block;
+}
+
+.correction-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 250px;
+    z-index: 1;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.correction-content a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.correction-content a:hover {
+    background-color: #ddd;
+}
+
+.checkButtons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+button {
+    background: rgb(17, 166, 131);
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:focus, 
+button:hover {
+    background: rgb(42, 201, 164);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.word-counter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    max-width: 670px;
+    margin: 20px auto;
+}
